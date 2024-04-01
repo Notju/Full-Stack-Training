@@ -1,3 +1,9 @@
+#card1>*{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -106,5 +112,9 @@ a button{
 }
 #full:target, #full2:target {
     display: block;
+}
+
+#full2 .close button{
+    color: aliceblue;
 }
 
