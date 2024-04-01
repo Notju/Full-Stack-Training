@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+#card-main{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+#card{
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+}
+#inner{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.8s ease-in-out;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#front,#back{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#front{
+    background-image: url("r1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#card:hover  #inner{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+#back{
+    transform: rotateY(180deg);
+
+}
+#back img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: blur(5px);
+    
+}
+#card1{
+    height: 200px;
+    padding-left: 40%;
+}
+#card1 >*{
+    padding: 10px;
+}
+a button{
+    width: 10px;
+    height: 10px;
+}
+
+#full,#full2{
+    position: fixed;
+    top: 200px;
+    left: 27%;
+    z-index: 999;
+    display: none;
+}
+
+#full2{
+    left: 30%;
+}
+
+
+#full img ,#full2 img{
+    max-width: 65%;
+    max-height:  65%;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    left: 60%;
+    z-index: 9999;
+    
+
+}
+.close button{
+    background-color: transparent;
+    font-size: 30px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    
+}
+#full:target, #full2:target {
+    display: block;
+}
+
